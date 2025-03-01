@@ -9,9 +9,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GetechnologiesMx.Service.Services.Repository
 {
-    public class PersonaRepository : RepositoryBase<Factura>
+    public class PersonaRepository : RepositoryBase<Persona>
     {
-        public PersonaRepository(IUnitOfwork unitOfwork, string ProcedureName) : base(unitOfwork, ProcedureName)
+        public PersonaRepository(IUnitOfwork unitOfwork) : base(unitOfwork)
         {
 
         }

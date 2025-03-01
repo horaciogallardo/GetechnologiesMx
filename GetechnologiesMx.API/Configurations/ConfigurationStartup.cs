@@ -5,6 +5,7 @@ using GetechnologiesMx.Service.Services.IUnitOfworks;
 using GetechnologiesMx.Service.Services.UnitofWorkService;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Sqlite;
 using System.Configuration;
 
 namespace GetechnologiesMx.API.Configurations
@@ -38,10 +39,6 @@ namespace GetechnologiesMx.API.Configurations
         public static IServiceCollection Configurar_Repositories(this IServiceCollection services)
         {
             services.AddScoped<IUnitOfwork, UnitofWorkService>();
-            //services.AddScoped<IOrganizacionService, OrganizacionService>();
-            //services.AddScoped<IGrupoService, GrupoService>();
-            //services.AddScoped<IBitacoraPAService, BitacoraPAService>();
-            //services.AddScoped<IFasesService, FasesService>();
             services.AddTransient<ApiExceptionHandler>();
             services.AddScoped<ApiDbContext>();
 
@@ -49,12 +46,27 @@ namespace GetechnologiesMx.API.Configurations
         }
         //protected override void OnConfiguring(ApiDbContext options)
         //{
-        //    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+        //    //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+        //    options.UseSqlite(Configuration.GetConnectionString("GetechnologiesMxDB"));
         //}
 
         public static IServiceCollection AddConfigurationDBA(this IServiceCollection services, IConfiguration _config)
         {
-            //services.AddDbContext<GestorApli>(c=> c.UseSqlServer(_config.GetConnectionString("DB_Probol")));
+            services.AddControllersWithViews();
+
+            services.AddDbContext<ApiDbContext>(c => c.UseSqlite(_config.GetConnectionString("GetechnologiesMxDB")));
+            ////services.AddDbContext<GestorApli>(c=> c.UseSqlServer(_config.GetConnectionString("DB_Probol")));
+            //switch (CurrentEnvironment.EnvironmentName)
+            //{
+            //    case "IntegrationTesting":
+            //        var connection = new SqliteConnection
+            //                  ("DataSource=:memory:");
+            //        connection.Open();
+            //        services.AddDbContext<ApiDbContext>(opt =>
+            //                      opt.UseSqlite(connection));
+
+            //        break;
+            //}
             return services;
         }
 

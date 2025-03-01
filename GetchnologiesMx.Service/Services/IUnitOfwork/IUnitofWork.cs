@@ -9,7 +9,7 @@ namespace GetechnologiesMx.Service.Services.IUnitOfworks
 {
     public interface IUnitOfwork : IDisposable
     {
-        DbContext Context { get; }
-        public Task SaveChangesAsync();
+        DbContext Context { get; } 
+        public Task SaveChangesAsync(); 
     }
 }

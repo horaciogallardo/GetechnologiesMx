@@ -10,6 +10,7 @@ namespace GetechnologiesMx.Service.Models
 {
     public class Persona
     {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdPersona { get; set; }
 
         [Required(ErrorMessage = "Nombre es Requerido")]
@@ -26,6 +27,10 @@ namespace GetechnologiesMx.Service.Models
         [Required(ErrorMessage = "Identificacion es Requerido")]
         [StringLength(100, ErrorMessage = "Identificacion no puede ser mayo de 100 caracteres")]
         public string? Identificacion { get; set; }
+
+
+        //[Required]
+        //public virtual ICollection<Factura> Factura { get; set; }
 
     }
 }

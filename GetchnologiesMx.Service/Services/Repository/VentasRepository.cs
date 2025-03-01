@@ -6,13 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using GetechnologiesMx.Service.Dtos;
 
 namespace GetechnologiesMx.Service.Services.Repository
 {
-    public class FacturaRepository : RepositoryBase<Factura>
+    public class VentasRepository : RepositoryBase<VentasDtos>
     {
-        public FacturaRepository(IUnitOfwork unitOfwork) : base(unitOfwork)
-        {
-        }
+        public VentasRepository(IUnitOfwork unitOfwork) : base(unitOfwork)
+        { 
+        } 
     }
 }

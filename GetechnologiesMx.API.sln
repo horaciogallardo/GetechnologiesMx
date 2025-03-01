@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetechnologiesMx.API", "GetechnologiesMx.API\GetechnologiesMx.API.csproj", "{FB87A264-918A-4449-AE72-7BEA666DDB1D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetechnologiesMx.Service", "GetchnologiesMx.Service\GetechnologiesMx.Service.csproj", "{AE9BEF2A-072B-498B-99F5-5A6BBC4540F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetechnologiesMx.Service", "GetchnologiesMx.Service\GetechnologiesMx.Service.csproj", "{AE9BEF2A-072B-498B-99F5-5A6BBC4540F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetechnologiesMx.API", "GetechnologiesMx.API\GetechnologiesMx.API.csproj", "{A5D2C043-19A1-43DF-8A1C-B0BC16331A9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FB87A264-918A-4449-AE72-7BEA666DDB1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB87A264-918A-4449-AE72-7BEA666DDB1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB87A264-918A-4449-AE72-7BEA666DDB1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB87A264-918A-4449-AE72-7BEA666DDB1D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AE9BEF2A-072B-498B-99F5-5A6BBC4540F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AE9BEF2A-072B-498B-99F5-5A6BBC4540F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE9BEF2A-072B-498B-99F5-5A6BBC4540F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE9BEF2A-072B-498B-99F5-5A6BBC4540F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5D2C043-19A1-43DF-8A1C-B0BC16331A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5D2C043-19A1-43DF-8A1C-B0BC16331A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5D2C043-19A1-43DF-8A1C-B0BC16331A9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5D2C043-19A1-43DF-8A1C-B0BC16331A9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

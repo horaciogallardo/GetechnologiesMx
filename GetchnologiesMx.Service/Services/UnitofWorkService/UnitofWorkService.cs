@@ -16,7 +16,7 @@ namespace GetechnologiesMx.Service.Services.UnitofWorkService
 
         public UnitofWorkService(ApiDbContext context)
         {
-            _context = context;
+            _context = context; 
         }
         public DbContext Context => _context;
 
@@ -27,7 +27,7 @@ namespace GetechnologiesMx.Service.Services.UnitofWorkService
 
         public void Dispose()
         {
-            Dispose(true);
+            Dispose(true); 
             GC.SuppressFinalize(this);
         }
 
